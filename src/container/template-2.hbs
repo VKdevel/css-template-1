@@ -40,7 +40,7 @@
         </div>
 
         <div class="page_block">
-            <div class="list">
+            <div class="list_header">
                 <div class="row">
                     <div class="col-6">
                         <h2 class="list_title">List of types</h2>
@@ -55,6 +55,49 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+
+        <div class="page_block">
+            <main class="main">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="list_header">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="list_title">List of posts</h2>
+                                </div>
+
+                                <div class="col-5">
+                                    <div class="category_list">
+                                        {{#each categories}}
+                                        <button class="category_button">{{text}}</button>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="list">
+                            {{!-- <div class="post">
+                                <strong class="post_title"></strong>
+                                <div class="post_info">dgsdg <span class="post_author">1</span></div>
+                                <p class="post_description">text</p>
+                                <a href="#">Continie reading</a>
+                            </div> --}}
+                            {{#each news}}
+{{> cardPost data=this }}
+                            
+                            {{/each}}
+                            
+                            List of news</div>
+
+
+
+                        <aside class="list_aside">list menu</aside>
+                    </div>
+                </div>
+            </main>
         </div>
 
 

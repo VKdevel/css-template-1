@@ -237,9 +237,10 @@ margin-bottom: 12px;
   font-size: 32px;
 }
 
-.list {
+.list_header {
 border-bottom: #343A40;
 padding-bottom: 12px;
+margin-bottom: 40px;
 }
 
 .category_button {
@@ -262,3 +263,46 @@ padding-bottom: 12px;
   background-color: #198754;
   color: blue;
 }
+
+.list_aside {
+  margin-left: 40px;
+}
+
+.list > *:not(:last-child) {
+margin-top: 40px;
+}
+
+.post {
+  padding-bottom: 12px;
+  border-bottom: 1px solid black;
+}
+
+.post > *:not(last-child) {
+  margin-bottom: 12px;
+}
+
+.post_title {
+  display: block;
+  font-weight: 500;
+  font-size: 27px;
+  color: #212529;
+}
+
+.post_info {
+  color: #999999;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.post_author {
+  color: #0050FF;
+}
+
+.post_description {
+  color: ##212529;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+
