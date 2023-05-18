@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <div class="page_block">
+        {{!-- <div class="page_block">
             <div class="list_header">
                 <div class="row">
                     <div class="col-6">
@@ -55,7 +55,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
 
         <div class="page_block">
@@ -64,11 +64,11 @@
                     <div class="col-12">
                         <div class="list_header">
                             <div class="row">
-                                <div class="col-7">
+                                <div class="col-4">
                                     <h2 class="list_title">List of posts</h2>
                                 </div>
 
-                                <div class="col-5">
+                                <div class="col-8">
                                     <div class="category_list">
                                         {{#each categories}}
                                         <button class="category_button">{{text}}</button>
@@ -77,24 +77,35 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="list">
+                                    {{#each news}}
+                                    {{> cardPost data=this }}
+                                    {{/each}}
+                                </div>
+                            </div>
 
-                        <div class="list">
-                            {{!-- <div class="post">
-                                <strong class="post_title"></strong>
-                                <div class="post_info">dgsdg <span class="post_author">1</span></div>
-                                <p class="post_description">text</p>
-                                <a href="#">Continie reading</a>
-                            </div> --}}
-                            {{#each news}}
-{{> cardPost data=this }}
-                            
-                            {{/each}}
-                            
-                            List of news</div>
+                            <div class="col-4">
+                                <aside class="list_aside">
+                                    <div class="about">
+                                        <h4 class="about_title">About</h4>
+                                        <p class="about_text">{{about}}</p>
+                                    </div>
+                                   
+                                    {{> linkList data=archive title="Archive"}}
 
+                                    {{> linkList data=social title="Social"}}
+                                
+                                    {{!-- <div class="link_list">
+                                        <strong class="link_title">Archives</strong>
 
+                                        <a href="#" class="link_item">link</a>
+                                    </div> --}}
+                                </aside>
+                            </div>
 
-                        <aside class="list_aside">list menu</aside>
+                        </div>
                     </div>
                 </div>
             </main>
